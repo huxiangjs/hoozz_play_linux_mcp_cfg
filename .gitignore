@@ -62,4 +62,6 @@ Testing/
 
 # Others
 *.code-workspace
-dev_store/
+data/
+linux-pwd-sync
+

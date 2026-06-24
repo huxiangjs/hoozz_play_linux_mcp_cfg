@@ -3,9 +3,9 @@ CXX       := g++
 CC        := gcc
 CXXFLAGS  := -std=c++17 -Wall -Wextra -g
 CFLAGS    := -Wall -g
-LDFLAGS   :=
+LDFLAGS   := -lpthread
 LIBS      :=
-TARGET    := linux-mcp-cfg
+TARGET    := linux-pwd-sync
 BUILDDIR  := build
 
 # Initialize source lists

@@ -29,7 +29,7 @@
 #include <time.h>
 #include <errno.h>
 
-#define STORE_PATH		"dev_store"
+#define STORE_PATH		"data"
 
 void store_init(void)
 {
@@ -100,6 +100,7 @@ void os_get_fixed_id(uint8_t *id)
 	const char *filename = STORE_PATH "/id";
 	struct stat st;
 	FILE *fp;
+	int i;
 
 	if (stat(filename, &st)) {
 		fp = fopen(filename, "wb");
@@ -109,7 +110,7 @@ void os_get_fixed_id(uint8_t *id)
 		}
 		
 		srand(time(NULL));
-		for (int i = 0; i < 6; i++)
+		for (i = 0; i < 6; i++)
 			id[i] = rand() % 256;
 		
 		fwrite(id, 1, 6, fp);
@@ -126,4 +127,9 @@ void os_get_fixed_id(uint8_t *id)
 		fread(id, 1, 6, fp);
 		fclose(fp);
 	}
+}
+
+const char *get_store_parent_path(void)
+{
+	return STORE_PATH;
 }

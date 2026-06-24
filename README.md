@@ -1,3 +1,11 @@
-# Hoozz Play Linux MCP Configuration
+# Hoozz Play Linux Password Sync
 
-Provides the ability to sync devices configured on a mobile phone to the MCP server.
+Allows you to sync the device password configured on your phone to the server.
+
+[![C/C++ Make Build](https://github.com/huxiangjs/hoozz_play_linux_pwd_sync/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/huxiangjs/hoozz_play_linux_pwd_sync/actions/workflows/c-cpp.yml)
+
+## Run
+```shell
+make
+./linux-pwd-sync
+```

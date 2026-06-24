@@ -28,6 +28,6 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v7
       with:
-        path: linux-mcp-cfg
+        path: linux-pwd-sync
         archive: false
         if-no-files-found: ignore
